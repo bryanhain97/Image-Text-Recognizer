@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
   height: 100vh;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 1rem;
+  background-color: rgb(255, 255, 255);
   text-align: center;
 }
 

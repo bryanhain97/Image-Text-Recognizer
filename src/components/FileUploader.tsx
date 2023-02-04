@@ -1,12 +1,12 @@
 import React, { BaseSyntheticEvent, useState, useRef, useEffect } from 'react';
 import Tesseract from 'tesseract.js';
 
-interface IFileRecognizer {
+interface IImageTextRecognizer {
     setImage?: () => void
     enabled?: boolean
 }
 
-const FileRecognizer: React.FC<IFileRecognizer> = () => {
+const ImageTextRecognizer: React.FC<IImageTextRecognizer> = () => {
     const imageRef = useRef<HTMLImageElement | null>(null)
     const [imageSrc, setImageSrc] = useState<string>("")
 
@@ -17,9 +17,9 @@ const FileRecognizer: React.FC<IFileRecognizer> = () => {
     }, [imageSrc])
 
     return (
-        <div className="fileuploader p-3 border rounded-lg shadow-lg">
+        <div>
             <input
-                className="m-3 "
+                className="m-3"
                 type="file"
                 id="image"
                 name="image"
@@ -27,12 +27,13 @@ const FileRecognizer: React.FC<IFileRecognizer> = () => {
                 onChange={handleInputChange}
             />
             <img
+                className="m-auto w-fit my-4 max-h-96"
                 ref={imageRef}
                 alt="no alt"
             />
             <button
                 onClick={logText}
-                className="mt-10 bg-teal-600"
+                className="mt-10 bg-slate-400 text-white"
             >
                 Log Text
             </button>
@@ -66,4 +67,4 @@ const FileRecognizer: React.FC<IFileRecognizer> = () => {
     }
 }
 
-export default FileRecognizer;
+export default ImageTextRecognizer;
