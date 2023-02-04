@@ -9,10 +9,10 @@ With a click on a button it tries to recognize the text and logs it to the conso
 
 #### Technologies i used for this project:
 
-<pr>To build the app i ued [React.js](https://reactjs.org/)  
+<pr>To build the app i used [React.js](https://reactjs.org/)  
 To style my components i used [Tailwindcss](https://tailwindui.com/)  
 To recognize text from images i used [Tesseract.js](https://github.com/naptha/tesseract.js)
 
 </p>
 
-_the creators of tesseract.js recommends not to use the software for production_
+_the creators of tesseract.js recommend not to use their software for production_
